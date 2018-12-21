@@ -1,5 +1,6 @@
 from data import dataset
 from task1 import *
+from task3 import *
 
 import plotly
 import plotly.graph_objs as go
@@ -7,10 +8,6 @@ import plotly.graph_objs as go
 
 #Вивести кругову діаграму: якого товару на яку суму продано.
 
-data = ?
+diagram = go.Pie(labels=list(res.keys()), values=list(res.values()))
 
-diagram = ?
-
-fig = ?
-
-plotly.offline.plot(?)
+plotly.offline.plot([diagram], filename='diag2.html')
